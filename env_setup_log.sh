@@ -5,6 +5,7 @@ conda create --prefix=ltlsteve python=3.10
 activate ./ltlsteve
 
 # Install PyTorch with cuda support (change the cuda version accordingly)
+# Note: if using slurm, please initialize the repo inside of a gpunode and then install
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
 # Install Java 8 (reference: https://docs.minedojo.org/sections/getting_started/install.html) mine is for ubuntu
@@ -24,7 +25,11 @@ pip install setuptools==65.5.0 pip==21
 pip install wheel==0.38.0
 
 # Install MineDojo and MineCLIP
-pip install minedojo git+https://github.com/MineDojo/MineCLIP
+# (for debugging) Change the `build.gradle` dependency's file path, the comments should point out which line to change.
+# (reference: https://github.com/MineDojo/MineDojo/issues/113)
+cd MineDojo
+pip install -e .
+cd ..
 
 # Install MineRL (This will take a while)
 pip install git+https://github.com/minerllabs/minerl@v1.0.1

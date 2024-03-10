@@ -15,8 +15,9 @@
 We provided a setup script (`env_setup_log.sh`) to create a conda environment with all the dependencies installed. This script is tested on Ubuntu 22.04.
 There might be some warnings from pip on conflicting `gym` version, feel free to ignore that.
 
-If you are running into issue relate to installation, please refer to the reference source listed for each steps in the shell script, and
-install all dependencies individually.
+If you are running into issue relate to installation, please refer to the reference source listed for each steps in the shell script, and install all dependencies individually.
+
+#### Notes:
 
 > Some extra effort is needed to setup the `JAVA_HOME` environment variable. The same location has to be available in your `PATH` as well.
 
@@ -27,6 +28,8 @@ xvfb-run python path/to/minedojo/python/scripts.py
 
 MINEDOJO_HEADLESS=1 python path/to/minedojo/python/scripts.py
 ```
+
+> Please install MineDojo from source (include in this repo), reason being Malmo has unsupported link that we fixed by hosting the file locally; otherwise, MineDojo will not run.
 
 ### Supported Actions
 
