@@ -163,6 +163,7 @@ class MinecraftInstance:
                 self.minecraft_dir,
                 replaceable=replaceable,
             )
+            print("Now we are using port:", port)
 
             # 2. Create a watcher process to ensure things get cleaned up
             if not daemonize:

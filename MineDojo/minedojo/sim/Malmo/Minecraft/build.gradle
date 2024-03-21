@@ -29,9 +29,9 @@ buildscript {
         // }
 
         // ADDED: Replace github link with abs. path to local file location
-        classpath fileTree(dir: '/home/barry/Documents/GitHub/MineDojo/minedojo/sim/Malmo/MixinGradle-dcfaf61/MixinGradle/dcfaf61', include: '*.jar')
+        classpath fileTree(dir: '/home/user/ltl_steve1/MineDojo/minedojo/sim/Malmo/MixinGradle-dcfaf61/MixinGradle/dcfaf61', include: '*.jar')
 
-        classpath 'com.github.yunfanjiang:ForgeGradle:FG_2.2_patched-SNAPSHOT'
+        classpath 'com.github.brandonhoughton:ForgeGradle:FG_2.2_patched-SNAPSHOT'
     }
     configurations {
         compileClasspath {
@@ -51,7 +51,7 @@ plugins {
 }
 
 dependencies {
-    implementation 'com.github.yunfanjiang:ForgeGradle:FG_2.2_patched-SNAPSHOT'
+    implementation 'com.github.brandonhoughton:ForgeGradle:FG_2.2_patched-SNAPSHOT'
 }
 
 apply plugin: 'net.minecraftforge.gradle.forge'

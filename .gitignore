@@ -161,3 +161,10 @@ cython_debug/
 
 # Conda
 ltlsteve
+
+*.mp4
+*.pkl
+*.weights
+*.pth
+*.pt
+*.zip
