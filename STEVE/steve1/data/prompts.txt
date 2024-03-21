@@ -1,0 +1,11 @@
+chop trees
+craft planks
+craft sticks
+chop trees
+craft planks
+craft a craft table
+chop trees
+craft planks
+place craft table
+craft a wooden pickaxe
+use pickaxe to mine stones

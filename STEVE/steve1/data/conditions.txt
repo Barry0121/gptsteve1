@@ -1,0 +1,11 @@
+*log 4
+*plank 4
+stick 2
+*log 2
+*plank 4
+crafting_table 1
+*log 1
+*plank 4
+crafting_table 0
+*pickaxe 1
+air 0
