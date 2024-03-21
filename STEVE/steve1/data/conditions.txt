@@ -9,3 +9,4 @@ crafting_table 1
 crafting_table 0
 *pickaxe 1
 air 0
+ooo
