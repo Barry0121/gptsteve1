@@ -132,6 +132,7 @@ if __name__ == '__main__':
     parser.add_argument('--visual_cond_scale', type=float, default=7.0)
     parser.add_argument('--gameplay_length', type=int, default=2000)
     parser.add_argument('--save_dirpath', type=str, default='data/generated_videos/')
+    parser.add_argument('--task', type=str, default=None)
     parser.add_argument('--custom_text_prompt_pth', type=str, default=None)
     parser.add_argument('--custom_conditions_pth', type=str, default=None)
     args = parser.parse_args()
