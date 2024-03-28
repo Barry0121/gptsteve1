@@ -76,7 +76,7 @@ def load_mineclip_wconfig():
 
 def make_env(seed):
     print('Loading MineRL...')
-    env = HumanSurvival_nodrop(**ENV_KWARGS).make()
+    env = HumanSurvival(**ENV_KWARGS).make()
     print('Starting new env...')
     env.reset()
     if seed is not None:
