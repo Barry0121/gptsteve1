@@ -184,6 +184,7 @@ def run_agent(prompt_embed, gameplay_length, save_video_filepath,
             task, condition = bot.create_task(args, obs, "next")
             prompt_embed = get_prior_embed(task, mineclip, prior, DEVICE)
             obj, num = condition
+            count = 0
 
         frame = obs['pov']
 

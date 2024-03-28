@@ -461,7 +461,7 @@ KEYMAP = {
     "32": "right",
     "57": "jump",
     "18": "inventory",
-    "16": "drop",
+    "21": "drop",
     "42": "sneak",
     "29": "sprint",
     "-100": "attack",  # BUTTON0 Left Click
