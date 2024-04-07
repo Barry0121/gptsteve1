@@ -1,4 +1,3 @@
-
 # Change custom_text_prompt to whatever text prompt you want to generate a video
 for i in {1..5}; do \
 xvfb-run python steve1/run_agent/run_agent.py \
