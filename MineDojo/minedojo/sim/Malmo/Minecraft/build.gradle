@@ -28,9 +28,9 @@ buildscript {
         //     exclude group: 'org.ow2.asm', module: 'asm-debug-all'
         // }
 
-        // ADDED: Replace github link with abs. path to local file location
-        classpath files(projectDir.parent.file('./MixinGradle-dcfaf61/MixinGradle/dcfaf61.jar'))
-        // classpath fileTree(dir: '/home/user/ltl_steve1/MineDojo/minedojo/sim/Malmo/MixinGradle-dcfaf61/MixinGradle/dcfaf61', include: '*.jar')
+        // ADDED: Replace github link with relative path to local file location
+        // classpath files(projectDir.parent.file('./MixinGradle-dcfaf61/MixinGradle/dcfaf61.jar'))
+        classpath fileTree(dir: './MixinGradle-dcfaf61/MixinGradle/dcfaf61/MixinGradle-dcfaf61.jar', include: '*.jar')
 
         classpath 'com.github.brandonhoughton:ForgeGradle:FG_2.2_patched-SNAPSHOT'
     }

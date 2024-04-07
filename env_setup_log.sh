@@ -21,8 +21,8 @@ sudo update-alternatives --config java # run this to switch version
 sudo apt install xvfb xserver-xephyr tigervnc-standalone-server python3-opengl ffmpeg
 
 # Prepare for gym installation (reference: https://stackoverflow.com/questions/77124879/pip-extras-require-must-be-a-dictionary-whose-values-are-strings-or-lists-of)
-pip install setuptools==65.5.0 pip==21
-pip install wheel==0.38.0
+# pip install setuptools==65.5.0 pip==21
+# pip install wheel==0.38.0
 
 # Install MineDojo and MineCLIP
 # (for debugging) Change the `build.gradle` dependency's file path, the comments should point out which line to change.
@@ -35,14 +35,14 @@ cd ..
 pip install git+https://github.com/minerllabs/minerl@v1.0.1
 
 # Install VPT dependencies (VPT will downgrade gym to an older version and this is okay)
-pip install gym==0.19 gym3 attrs opencv-python # TODO: Might have to try changing VPT's dependency from 0.19 to 0.21, otherwise MineDojo can't run
+# pip install gym==0.19 gym3 attrs opencv-python # TODO: Might have to try changing VPT's dependency from 0.19 to 0.21, otherwise MineDojo can't run
+pip install gym3 attrs opencv-python
 
 # Extra dependencies
 pip install gdown tqdm accelerate==0.18.0 wandb importlib-resources==5.0
 
 # Clone Steve-1 and install locally
-git submodule add https://github.com/Shalev-Lifshitz/STEVE-1.git
-cd STEVE-1
+cd STEVE
 pip install -e .
 cd ..
 
