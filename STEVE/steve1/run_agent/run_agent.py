@@ -25,6 +25,15 @@ def encode_image(image_path):
   with open(image_path, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
 
+class Dialog:
+    def __init__(self):
+        self.log = []
+    def add_log(self, role, content):
+        self.log.append({"role": role, "content": content})
+    def save_log(self, path):
+        with open(path, "w+") as f:
+            json.dump(self.log, f)
+
 
 class ChatApp:
     def __init__(self):
@@ -64,6 +73,7 @@ class ChatApp:
             condition = ("air", 0)
             
         print(f"Get task:{task}, stop at {condition}")
+        logger.add_log("assistant", response)
         return task, condition
     
     def create_task(self, args, obs = None, mode = "start", base64_image = None):
@@ -181,6 +191,7 @@ def run_agent(prompt_embed, gameplay_length, save_video_filepath,
         # satisfy inventory condition
         if obj != "air" and check_inventory(obs['inventory'], obj, num):
             print(f"Condition {obj}, {num} satisfied! Next task...")
+            logger.add_log("agent", f"Condition {obj}, {num} satisfied! Next task...")
             task, condition = bot.create_task(args, obs, "next")
             prompt_embed = get_prior_embed(task, mineclip, prior, DEVICE)
             obj, num = condition
@@ -190,6 +201,7 @@ def run_agent(prompt_embed, gameplay_length, save_video_filepath,
 
         if count == args.help_gap:
             print("Got stuck! Asking for help...")
+            logger.add_log("agent", "Got stuck! Asking for help...")
             pic_dir = os.path.join(args.stuckpoint_pth, "current.jpg")
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
             cv2.imwrite(pic_dir, frame)
@@ -213,6 +225,7 @@ def run_agent(prompt_embed, gameplay_length, save_video_filepath,
         fp.writelines([str(item_num_list)])
     # Print the programmatic eval task results at the end of the gameplay
     prog_evaluator.print_results()
+    logger.save_log(os.path.join(args.save_dirpath, f"{datetime.now()}dialog.json"))
 
 
 def generate_text_prompt_videos(custom_prompt_embeds, condition_list, in_model, in_weights, cond_scale, gameplay_length, save_dirpath, bot, args, stv1):
@@ -255,6 +268,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     bot = ChatApp()
+    logger = Dialog()
     task, condition = bot.create_task(args)
 
     mineclip = load_mineclip_wconfig()
