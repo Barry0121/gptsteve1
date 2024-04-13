@@ -1,5 +1,6 @@
 import os
 import sys
+from dotenv import load_dotenv
 from datetime import datetime
 
 import cv2
@@ -20,7 +21,6 @@ from steve1.utils.mineclip_agent_env_utils import load_mineclip_agent_env, load_
 from steve1.utils.video_utils import save_frames_as_video
 import openai
 
-
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
@@ -38,6 +38,7 @@ class Dialog:
 class ChatApp:
     def __init__(self):
         # Setting the API key to use the OpenAI API
+        load_dotenv()
         openai.api_key = os.getenv("OPENAI_API_KEY")
         self.headers = {
             "Content-Type": "application/json",
@@ -57,7 +58,7 @@ class ChatApp:
         )
         self.messages.append({"role": "assistant", "content": response["choices"][0]["message"].content})
         return response["choices"][0]["message"]["content"]
-    
+
     def process_response(self, response):
         task, condition = None, None
         try:
@@ -71,11 +72,11 @@ class ChatApp:
             print(f"Invalid instruction: {response}")
             task = "explore as far as possible"
             condition = ("air", 0)
-            
+
         print(f"Get task:{task}, stop at {condition}")
         logger.add_log("assistant", response)
         return task, condition
-    
+
     def create_task(self, args, obs = None, mode = "start", base64_image = None):
         if mode == "start":
             with open(args.start_template_pth) as tpl_f:
@@ -102,9 +103,9 @@ class ChatApp:
                 prompt = prompt.replace("*INVENTORY*", "nothing")
         response = self.chat(prompt)
         return self.process_response(response)
-        
+
     def help_task(self, template, base64_image, obs):
-        
+
         prompt = template["content"]
         prompt = prompt.replace("*TASK*", args.task)
         inventory = obs["inventory"]
@@ -114,7 +115,7 @@ class ChatApp:
             prompt = prompt.replace("*INVENTORY*", item_str)
         else:
             prompt = prompt.replace("*INVENTORY*", "nothing")
-        
+
         # print(prompt)
         content_txt = {
                 "type": "text",
@@ -144,7 +145,7 @@ FPS = 30
 def check_inventory(inventory: OrderedDict, obj: str, num: int) -> bool:
     if obj == "air":
         return True
-    
+
     if obj not in inventory.keys():
         obj = '*' + obj
 
@@ -220,7 +221,7 @@ def run_agent(prompt_embed, gameplay_length, save_video_filepath,
     os.makedirs(os.path.dirname(save_video_filepath), exist_ok=True)
     save_frames_as_video(gameplay_frames, save_video_filepath, FPS, to_bgr=True)
     inventory = obs["inventory"]
-    item_num_list = [(inventory.get(candidate), candidate) for candidate in inventory.keys() if inventory.get(candidate)]   
+    item_num_list = [(inventory.get(candidate), candidate) for candidate in inventory.keys() if inventory.get(candidate)]
     with open(os.path.join(args.save_dirpath, f"{datetime.now()}result.txt"), "w+") as fp:
         fp.writelines([str(item_num_list)])
     # Print the programmatic eval task results at the end of the gameplay

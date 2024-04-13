@@ -1,0 +1,1 @@
+[(array(1, dtype=int32), 'oak_planks'), (array(9, dtype=int32), 'stick'), (array(1, dtype=int32), 'wooden_hoe')]

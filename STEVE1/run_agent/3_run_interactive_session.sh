@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Interactive runs in text mode only, you can click on the window to pause and type in a new prompt
 python steve1/run_agent/run_interactive.py \
 --in_model data/weights/vpt/2x.model \

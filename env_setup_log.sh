@@ -27,6 +27,7 @@ sudo apt install xvfb xserver-xephyr tigervnc-standalone-server python3-opengl f
 # Install MineDojo and MineCLIP
 # (for debugging) Change the `build.gradle` dependency's file path, the comments should point out which line to change.
 # (reference: https://github.com/MineDojo/MineDojo/issues/113)
+pip install git+https://github.com/MineDojo/MineCLIP
 cd MineDojo
 pip install -e .
 cd ..
@@ -35,8 +36,7 @@ cd ..
 pip install git+https://github.com/minerllabs/minerl@v1.0.1
 
 # Install VPT dependencies (VPT will downgrade gym to an older version and this is okay)
-# pip install gym==0.19 gym3 attrs opencv-python # TODO: Might have to try changing VPT's dependency from 0.19 to 0.21, otherwise MineDojo can't run
-pip install gym3 attrs opencv-python
+pip install gym==0.19 gym3 attrs opencv-python
 
 # Extra dependencies
 pip install gdown tqdm accelerate==0.18.0 wandb importlib-resources==5.0
@@ -45,6 +45,12 @@ pip install gdown tqdm accelerate==0.18.0 wandb importlib-resources==5.0
 cd STEVE
 pip install -e .
 cd ..
+# Install weights
+. STEVE/download_weights.sh
 
 # (Optional) If there is an issue when running test_env.py (ex: error related to Malmo), try to run the following:
 # sudo apt-get install x11-xserver-utils
+
+# Install OpenAI API package
+pip install openai==0.28 python-dotenv
+# Make sure to export your OpenAI API key as a environment variable

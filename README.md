@@ -31,16 +31,18 @@ MINEDOJO_HEADLESS=1 python path/to/minedojo/python/scripts.py
 
 > Please install MineDojo from source (include in this repo), reason being Malmo has unsupported link that we fixed by hosting the file locally; otherwise, MineDojo will not run.
 
-### Docker 
-An experimental docker environment is also avaliable with all the dependencies installed. Use `docker pull barry121/ltlsteve:latest` to obtain the image. 
+### Docker
 
-You can run the image on your local machine or a headless machine with GPU support (requires nvidia docker toolkit, see [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)) with the command: 
+An experimental docker environment is also avaliable with all the dependencies installed. Use `docker pull barry121/ltlsteve:latest` to obtain the image.
+
+You can run the image on your local machine or a headless machine with GPU support (requires nvidia docker toolkit, see [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)) with the command:
+
 ```bash
 docker run --gpus all -it -d -p 8080:8080 barry0121/ltlsteve:latest tail -f /dev/null
 docker exec -it <running_container_id> /bin/bash
 ```
 
-### Supported Actions
+### Run Experiments
 
 [insert instructions]
 

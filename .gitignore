@@ -167,3 +167,6 @@ ltlsteve
 *.pth
 *.pt
 *.zip
+
+# OpenAI
+.env
