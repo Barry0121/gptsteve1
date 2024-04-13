@@ -1,6 +1,6 @@
 # Towards Long Horizon Action through Prompting Pre-trained Agent in Minecraft
 
-#### Authors: Yuyang Tang, Shijia Liu, Barry Xue
+#### Authors: Yuyang Tang (yuyang.tang@mail.utoronto.ca), Shijia Liu (shijia.liu@mail.utoronto.ca), Zexin Xue (zexin.xue@mail.utoronto.ca)
 
 ## Description
 
