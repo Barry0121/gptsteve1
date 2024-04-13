@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "Running " $1 "for " $2 "times. " "$3 frames each." 
+echo "Running " $1 "for " $2 "times. " "$3 frames each."
 mkdir $(pwd)/data/$1
 # Change custom_text_prompt to whatever text prompt you want to generate a video
 for ((i = 1; i <= $2; i++)); do \
-    test_dir=$(pwd)/data/$1/test$i
+    test_dir=$(pwd)/data/"$1"/test$i
     mkdir $test_dir
     echo "Test " $i
     xvfb-run python steve1/run_agent/run_agent.py \
