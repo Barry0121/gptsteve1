@@ -1,0 +1,1 @@
+[(array(1, dtype=int32), 'apple'), (array(5, dtype=int32), 'oak_log'), (array(1, dtype=int32), 'oak_sapling'), (array(1, dtype=int32), 'stick')]

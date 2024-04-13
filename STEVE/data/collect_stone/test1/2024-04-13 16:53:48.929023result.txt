@@ -1,0 +1,1 @@
+[(array(25, dtype=int32), 'dirt'), (array(8, dtype=int32), 'stick'), (array(1, dtype=int32), 'wooden_pickaxe')]

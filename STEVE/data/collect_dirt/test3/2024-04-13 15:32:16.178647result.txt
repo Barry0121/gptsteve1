@@ -1,0 +1,1 @@
+[(array(41, dtype=int32), 'dirt'), (array(15, dtype=int32), 'stick'), (array(1, dtype=int32), 'wheat_seeds')]

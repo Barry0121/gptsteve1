@@ -1,0 +1,136 @@
+Running  collect dirt for  3 times.  7200 frames each.
+Test  1
+/home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/VPT/lib/torch_util.py:36: UserWarning: 'has_cuda' is deprecated, please use 'torch.backends.cuda.is_built()'
+  return th.has_cuda
+[INFO:minedojo.tasks] Loaded 1581 Programmatic tasks, 1560 Creative tasks, and 1 special task: "Playthrough". Totally 3142 tasks loaded.
+Get task: punch tree, stop at ('log', 4)
+Loading MineClip...
+
+Generating video for text prompt with name: /home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/data/prompt/start_prompt.json
+Loading MineClip...
+Loading agent with cond_scale 6.0...
+Loading MineRL...
+Starting new env...
+/home/barry/miniconda3/envs/gptsteve/lib/python3.10/runpy.py:126: RuntimeWarning: 'minerl.utils.process_watcher' found in sys.modules after import of package 'minerl.utils', but prior to execution of 'minerl.utils.process_watcher'; this may result in unpredictable behaviour
+  warn(RuntimeWarning(msg))
+  0%|                                                                                                                  | 0/7200 [00:00<?, ?it/s]/home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/embed_conditioned_policy.py:343: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  softmax_buttons = th.nn.functional.softmax(buttons)
+ 23%|███████████████████████▉                                                                               | 1669/7200 [01:23<04:36, 20.00it/s]Updating count for log from 0 to 1
+ 24%|████████████████████████▊                                                                              | 1735/7200 [01:27<04:32, 20.04it/s]Updating count for log from 1 to 2
+ 28%|████████████████████████████▌                                                                          | 1998/7200 [01:39<04:14, 20.42it/s]Got stuck! Asking for help...
+Get task: punch tree, stop at ('oak_log', 4)
+ 56%|█████████████████████████████████████████████████████████▏                                             | 3999/7200 [03:21<02:33, 20.79it/s]Got stuck! Asking for help...
+Get task: punch tree, stop at ('oak_log', 4)
+ 74%|████████████████████████████████████████████████████████████████████████████▎                          | 5334/7200 [04:31<01:34, 19.81it/s]Updating count for log from 2 to 3
+ 83%|█████████████████████████████████████████████████████████████████████████████████████▊                 | 5998/7200 [05:03<00:59, 20.34it/s]Got stuck! Asking for help...
+Get task: punch tree, stop at ('oak_log', 4)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████▊| 7188/7200 [06:01<00:00, 20.51it/s]Condition oak_log, 4 satisfied! Next task...
+Get task: craft crafting_table, stop at ('crafting_table', 1)
+Updating count for log from 3 to 4
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████▊| 7191/7200 [06:05<00:03,  2.49it/s]Updating count for log from 4 to 5
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 7200/7200 [06:05<00:00, 19.69it/s]
+Programmatic Evaluation Results:
+log: 5
+dirt: 0
+seed: 0
+travel_dist: 32.919295237617426
+
+Test  2
+/home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/VPT/lib/torch_util.py:36: UserWarning: 'has_cuda' is deprecated, please use 'torch.backends.cuda.is_built()'
+  return th.has_cuda
+[INFO:minedojo.tasks] Loaded 1581 Programmatic tasks, 1560 Creative tasks, and 1 special task: "Playthrough". Totally 3142 tasks loaded.
+Get task: Punch a tree to collect wood, stop at ('log', 1)
+Loading MineClip...
+
+Generating video for text prompt with name: /home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/data/prompt/start_prompt.json
+Loading MineClip...
+Loading agent with cond_scale 6.0...
+Loading MineRL...
+Starting new env...
+/home/barry/miniconda3/envs/gptsteve/lib/python3.10/runpy.py:126: RuntimeWarning: 'minerl.utils.process_watcher' found in sys.modules after import of package 'minerl.utils', but prior to execution of 'minerl.utils.process_watcher'; this may result in unpredictable behaviour
+  warn(RuntimeWarning(msg))
+  0%|                                                                                                                  | 0/7200 [00:00<?, ?it/s]/home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/embed_conditioned_policy.py:343: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  softmax_buttons = th.nn.functional.softmax(buttons)
+ 11%|███████████▋                                                                                            | 812/7200 [00:41<05:39, 18.81it/s]Updating count for seed from 0 to 1
+ 15%|███████████████▍                                                                                       | 1075/7200 [00:54<05:06, 19.97it/s]Updating count for seed from 1 to 2
+ 28%|████████████████████████████▌                                                                          | 1997/7200 [01:40<04:20, 20.01it/s]Got stuck! Asking for help...
+Get task: Dig and collect dirt blocks , stop at ('dirt', 1)
+ 31%|███████████████████████████████▊                                                                       | 2228/7200 [01:54<03:52, 21.39it/s]Condition dirt, 1 satisfied! Next task...
+Get task: Continue digging and collecting more dirt blocks, stop at ('dirt', 10)
+Updating count for dirt from 0 to 1
+ 33%|██████████████████████████████████▎                                                                    | 2399/7200 [02:06<04:16, 18.73it/s]Updating count for dirt from 1 to 2
+ 41%|██████████████████████████████████████████▋                                                            | 2982/7200 [02:35<03:31, 19.92it/s]Updating count for dirt from 2 to 4
+ 59%|████████████████████████████████████████████████████████████▍                                          | 4228/7200 [03:38<02:28, 19.98it/s]Got stuck! Asking for help...
+Get task: Dig and collect dirt blocks, stop at ('dirt', 1)
+ 59%|█████████████████████████████████████████████████████████████▎                                         | 4283/7200 [03:43<02:26, 19.92it/s]Condition dirt, 1 satisfied! Next task...
+Get task: Continue digging and collecting more dirt blocks, stop at ('dirt', 10)
+ 64%|█████████████████████████████████████████████████████████████████▋                                     | 4595/7200 [04:02<02:10, 20.00it/s]Updating count for dirt from 4 to 5
+ 87%|█████████████████████████████████████████████████████████████████████████████████████████▊             | 6282/7200 [05:28<00:45, 20.02it/s]Got stuck! Asking for help...
+Get task: Dig and collect dirt blocks, stop at ('dirt', 3)
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████▍    | 6879/7200 [06:02<00:16, 20.03it/s]Condition dirt, 3 satisfied! Next task...
+Get task: Continue digging and collecting more dirt blocks, stop at ('dirt', 10)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 7200/7200 [06:25<00:00, 18.69it/s]
+Programmatic Evaluation Results:
+log: 0
+dirt: 5
+seed: 2
+travel_dist: 27.576801829294062
+
+Test  3
+/home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/VPT/lib/torch_util.py:36: UserWarning: 'has_cuda' is deprecated, please use 'torch.backends.cuda.is_built()'
+  return th.has_cuda
+[INFO:minedojo.tasks] Loaded 1581 Programmatic tasks, 1560 Creative tasks, and 1 special task: "Playthrough". Totally 3142 tasks loaded.
+Get task: collect dirt, stop at ('dirt', 4)
+Loading MineClip...
+
+Generating video for text prompt with name: /home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/data/prompt/start_prompt.json
+Loading MineClip...
+Loading agent with cond_scale 6.0...
+Loading MineRL...
+Starting new env...
+/home/barry/miniconda3/envs/gptsteve/lib/python3.10/runpy.py:126: RuntimeWarning: 'minerl.utils.process_watcher' found in sys.modules after import of package 'minerl.utils', but prior to execution of 'minerl.utils.process_watcher'; this may result in unpredictable behaviour
+  warn(RuntimeWarning(msg))
+  0%|                                                                                                                  | 0/7200 [00:00<?, ?it/s]/home/barry/Documents/GitHub/ltl_steve1/STEVE/steve1/embed_conditioned_policy.py:343: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  softmax_buttons = th.nn.functional.softmax(buttons)
+  7%|███████▌                                                                                                | 524/7200 [00:26<05:21, 20.75it/s]Updating count for dirt from 0 to 1
+  8%|████████                                                                                                | 554/7200 [00:27<05:25, 20.43it/s]Updating count for dirt from 1 to 2
+  8%|████████▏                                                                                               | 566/7200 [00:28<05:29, 20.14it/s]Condition dirt, 4 satisfied! Next task...
+Get task: collect wood, stop at ('log', 3)
+Updating count for dirt from 2 to 6
+  8%|████████▍                                                                                               | 581/7200 [00:29<07:11, 15.33it/s]Updating count for dirt from 6 to 7
+  9%|█████████▎                                                                                              | 647/7200 [00:33<05:28, 19.97it/s]Updating count for dirt from 7 to 15
+  9%|█████████▋                                                                                              | 674/7200 [00:34<05:13, 20.83it/s]Updating count for dirt from 15 to 16
+ 10%|██████████▎                                                                                             | 710/7200 [00:36<04:59, 21.65it/s]Updating count for dirt from 16 to 17
+ 10%|██████████▋                                                                                             | 737/7200 [00:37<04:59, 21.59it/s]Updating count for dirt from 17 to 18
+ 11%|███████████▍                                                                                            | 791/7200 [00:40<05:15, 20.30it/s]Updating count for dirt from 18 to 19
+ 12%|████████████                                                                                            | 839/7200 [00:42<05:17, 20.03it/s]Updating count for dirt from 19 to 20
+ 12%|████████████▌                                                                                           | 873/7200 [00:44<05:11, 20.32it/s]Updating count for dirt from 20 to 21
+ 13%|█████████████▎                                                                                          | 918/7200 [00:46<05:01, 20.82it/s]Updating count for dirt from 21 to 22
+ 13%|█████████████▊                                                                                          | 954/7200 [00:47<05:09, 20.20it/s]Updating count for dirt from 22 to 23
+ 15%|███████████████▉                                                                                       | 1110/7200 [00:55<05:02, 20.10it/s]Updating count for log from 0 to 1
+ 16%|███████████████▉                                                                                       | 1116/7200 [00:55<05:03, 20.03it/s]Updating count for seed from 0 to 1
+ 17%|█████████████████▍                                                                                     | 1222/7200 [01:00<04:57, 20.09it/s]Updating count for log from 1 to 2
+ 18%|██████████████████▊                                                                                    | 1317/7200 [01:05<04:53, 20.01it/s]Condition log, 3 satisfied! Next task...
+Get task: craft planks, stop at ('plank', 12)
+Updating count for log from 2 to 3
+ 26%|██████████████████████████▌                                                                            | 1858/7200 [01:33<04:27, 19.95it/s]Condition plank, 12 satisfied! Next task...
+Get task: craft a crafting table, stop at ('crafting_table', 1)
+ 27%|████████████████████████████▏                                                                          | 1973/7200 [01:40<04:21, 20.00it/s]Condition crafting_table, 1 satisfied! Next task...
+Get task: place the crafting table, stop at ('crafting_table', 0)
+ 29%|█████████████████████████████▍                                                                         | 2062/7200 [01:49<04:16, 20.02it/s]Condition crafting_table, 0 satisfied! Next task...
+Get task: use the crafting table to craft a wooden pickaxe, stop at ('wooden_pickaxe', 1)
+ 56%|██████████████████████████████████████████████████████████▏                                            | 4064/7200 [03:30<02:37, 19.96it/s]Got stuck! Asking for help...
+Get task: collect dirt, stop at ('dirt', 32)
+ 68%|██████████████████████████████████████████████████████████████████████▍                                | 4926/7200 [04:14<01:41, 22.49it/s]Condition dirt, 32 satisfied! Next task...
+Get task: collect wood, stop at ('log', 3)
+Updating count for dirt from 23 to 40
+ 69%|██████████████████████████████████████████████████████████████████████▉                                | 4963/7200 [04:17<01:54, 19.58it/s]Updating count for dirt from 40 to 41
+ 70%|███████████████████████████████████████████████████████████████████████▉                               | 5027/7200 [04:21<01:48, 19.94it/s]Updating count for dirt from 41 to 42
+ 78%|████████████████████████████████████████████████████████████████████████████████▌                      | 5632/7200 [04:51<01:16, 20.54it/s]Condition log, 3 satisfied! Next task...
+Get task: use the crafting table to craft a wooden pickaxe, stop at ('wooden_pickaxe', 1)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 7200/7200 [06:08<00:00, 19.53it/s]
+Programmatic Evaluation Results:
+log: 3
+dirt: 42
+seed: 1
+travel_dist: 8.198170029192932

@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -105,7 +106,7 @@ class ChatApp:
         return self.process_response(response)
 
     def help_task(self, template, base64_image, obs):
-
+        time.sleep(60) # Sleep for about a minute to avoid GPT4 RateLimit
         prompt = template["content"]
         prompt = prompt.replace("*TASK*", args.task)
         inventory = obs["inventory"]
