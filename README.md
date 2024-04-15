@@ -93,12 +93,3 @@ python steve1/run_agent/run_interactive.py \
   --output_video_dirpath data/generated_videos/interactive_videos \
   --cond_scale 6.0
 ```
-
-
-## Preview of Results
-
-[insert table and graphs]
-
-## Acknowledgement
-
-[insert all used resources]
