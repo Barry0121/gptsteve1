@@ -2,6 +2,8 @@
 
 #### Authors: Yuyang Tang (yuyang.tang@mail.utoronto.ca), Shijia Liu (shijia.liu@mail.utoronto.ca), Zexin Xue (zexin.xue@mail.utoronto.ca)
 
+## Our paper report is available!! Check `GPTsteve1.pdf` for the full draft. 
+
 ## Description
 
 In this paper, we expand on the previous research on autonomous agents in Minecraft, specifically STEVE-1. We present a new approach that leverages the reasoning capability of LLM to guide STEVE-1 agents through instructions, allowing them to accomplish long-horizon and multi-step tasks. We view the LLMs as high-level policies, which will implicitly create an action trajectory to complete the specified long-term task. We apply a benchmark with three long-horizon tasks for the agent to complete. Afterward, we analyze the gameplay recordings of the agents and assess the feasibility of our approach. Finally, we analyze the effectiveness of our method and suggest areas for improvement in future studies.
